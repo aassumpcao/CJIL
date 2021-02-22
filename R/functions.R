@@ -258,4 +258,7 @@ data_analyze <- function(datapath = NULL, savedir = './') {
       height   = 5,
       device   = grDevices::cairo_pdf
     )
+
+  # return table for markdown
+  return(table)
 }

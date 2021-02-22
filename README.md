@@ -33,6 +33,14 @@ CJIL::data_process('data.rds.xz')
 CJIL::data_analyze()
 ```
 
+## Each function
+
+`CJIL::data_download()` visits two NC goverment APIs and downloads data (NC Courts and the Office of State Budget and Management). They are stored in a compressed file in the current directory.
+
+`CJIL::data_process()` cleans up the data. It renames variables, transform scales and returns the new dataset.
+
+`CJIL::data_process()` produces three simple analyses: a) it saves a graph of the evoluation of the type of criminal cases in North Carolina; b) it outputs regression coefficients for a simple correlation between `log(population)` and `number_of_cases`; c) it saves the regression line from b).
+
 ## Others
 
 Please feel free to email me @ andre.assumpcao@gmail.com for further clarification.
