@@ -15,8 +15,7 @@ and executes a simple analysis of the data. I believe this is a neat and new way
 
 You should just execute the following code snippet on a R Session.
 
-```
-
+```{r}
 # make sure you have devtools installed.
 if (!require(devtools)) {install.packages('devtools')}
 
@@ -32,7 +31,6 @@ CJIL::data_process('data.rds.xz')
 
 # produce the analysis
 CJIL::data_analyze()
-
 ```
 
 ## Others
