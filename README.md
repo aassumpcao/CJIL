@@ -31,15 +31,18 @@ data_cleaned <- CJIL::data_process(data)
 
 # produce the analysis and store table
 table <- CJIL::data_analyze(data_cleaned)
+
+# output the table
+print(table)
 ```
 
 ## Each function
 
-`CJIL::data_download()` visits two NC goverment APIs and downloads data (NC Courts and the Office of State Budget and Management). They are stored in a compressed file in the current directory.
+`CJIL::data_download()` visits two NC goverment APIs and downloads data (NC Courts and the Office of State Budget and Management). They are returned as a `tibble` dataset.
 
 `CJIL::data_process()` cleans up the data. It renames variables, transform scales and returns the new dataset.
 
-`CJIL::data_process()` produces three simple analyses: a) it saves a graph of the evoluation of the type of criminal cases in North Carolina; b) it outputs regression coefficients for a simple correlation between `log(population)` and `number_of_cases`; c) it saves the regression line from b).
+`CJIL::data_process()` produces three simple analyses: a) it saves a graph of the evoluation of the type of criminal cases in North Carolina; b) it oureturns the tputs regression coefficients for a simple correlation between `log(population)` and `number_of_cases`; c) it saves the regression line from b).
 
 ## Others
 
