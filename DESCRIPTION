@@ -1,0 +1,35 @@
+Package: CJIL
+Title: Produces the Analysis For the CJIL's Code Sample
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Andre",
+           family = "Assumpcao",
+           role = c("aut", "cre"),
+           email = "andre.assumpcao@gmail.com",
+           comment = c(ORCID = "0000-0003-1669-074X"))
+Description: This package has been created to produce the analysis required in the hiring process for the post-doctoral fellow position at the Criminal Justice Innovation Lab at UNC's School of Government.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    dplyr,
+    httr,
+    janitor,
+    jsonlite,
+    magrittr,
+    readr,
+    rlang,
+    stringr,
+    lubridate,
+    ggplot2,
+    broom,
+    tidyr,
+    tibble,
+    stats
+Depends: 
+    R (>= 2.10)
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
