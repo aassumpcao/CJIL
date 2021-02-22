@@ -1,10 +1,10 @@
-test_that('execute all tests', {
+testthat::test_that('execute all tests', {
   
   # test whether file has been downloaded
   data <- CJIL::data_download()
 
   # test whether download has worked
-  expect_false(is.null(data))
+  testthat::expect_false(is.null(data))
 
   # test whether file has been processed
   CJIL::data_process(data) == CJIL::data
@@ -13,7 +13,7 @@ test_that('execute all tests', {
   table <- CJIL::data_analyze(CJIL::data_process(data))
 
   # test whether table has been produced
-  expect_false(is.null(table))
+  testthat::expect_false(is.null(table))
 
   # check whether files have been produced
   exists <- all(
