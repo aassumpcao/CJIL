@@ -20,14 +20,14 @@ You should just execute the following code snippet on a R Session.
 if (!require(devtools)) {install.packages('devtools')}
 
 # install the CJIL from github
-devtools::install_githug('assumpcao/CJIL')
+devtools::install_githug('aassumpcao/CJIL')
 
 # there you go. you can use all functions in the package.
 # download the data
-CJIL::data_download()
+data <- CJIL::data_download()
 
 # process the data
-CJIL::data_process('data.rds.xz')
+CJIL::data_process(data)
 
 # produce the analysis
 CJIL::data_analyze()

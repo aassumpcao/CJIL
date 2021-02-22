@@ -7,7 +7,7 @@
 #' @importFrom rlang .data
 #'
 #' @export
-data_download <- function(filepath = './data.rds.xz') {
+data_download <- function() {
 
   # define main endpoint for court data and demography data
   endpoint1 <- 'https://data.nccourts.gov/api/records/1.0/download/'
@@ -51,8 +51,8 @@ data_download <- function(filepath = './data.rds.xz') {
   # join court data and demography data
   data <- dplyr::inner_join(data1, data2, by = c('county', 'year'))
 
-  # save to file
-  readr::write_rds(data, file = filepath, compress = 'xz')
+  # return to file
+  return(data)
 
   # print message
   message('NC Court and NC demography data have been downloaded.')
@@ -65,11 +65,8 @@ data_download <- function(filepath = './data.rds.xz') {
 #' @importFrom rlang .data
 #'
 #' @export
-data_process <- function(datapath) {
+data_process <- function(data) {
 
-  # load raw data
-  data <- readr::read_rds(datapath)
-  
   # drop irrelevant columns and rename remaining columns
   data <- data %>%
     dplyr::select(-dplyr::matches('dataset|recordid.y|record_timestamp.y')) %>%
