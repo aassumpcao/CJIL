@@ -4,12 +4,12 @@
 \alias{data_analyze}
 \title{Function to produce analysis of the data and print the results.}
 \usage{
-data_analyze(datapath = NULL, savedir = "./")
+data_analyze(data, savedir = "./")
 }
 \arguments{
-\item{datapath}{is the where the NC Court and Demography data are saved.}
-
 \item{savedir}{is the folder where the analysis should be saved.}
+
+\item{datapath}{is the where the NC Court and Demography data are saved.}
 }
 \description{
 Function to produce analysis of the data and print the results.

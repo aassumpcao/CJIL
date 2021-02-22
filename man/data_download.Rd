@@ -5,7 +5,7 @@
 \title{Function to download data from the NC Judicial Branch and the Office of
 State Budget and Management}
 \usage{
-data_download(filepath = "./data.rds.xz")
+data_download()
 }
 \arguments{
 \item{filepath}{is where the download should be saved. the default is the

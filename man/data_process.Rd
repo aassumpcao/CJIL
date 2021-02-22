@@ -4,7 +4,7 @@
 \alias{data_process}
 \title{Function to process the data and store a cleaned version on disk}
 \usage{
-data_process(datapath = NULL)
+data_process(data)
 }
 \arguments{
 \item{datapath}{is the where the NC Court and Demography data are saved.}

@@ -53,9 +53,6 @@ data_download <- function() {
 
   # return to file
   return(data)
-
-  # print message
-  message('NC Court and NC demography data have been downloaded.')
 }
 
 #' Function to process the data and store a cleaned version on disk
@@ -103,10 +100,14 @@ data_process <- function(data) {
 #' @importFrom rlang .data
 #'
 #' @export
-data_analyze <- function(datapath = NULL, savedir = './') {
+data_analyze <- function(data, savedir = './') {
 
   # load data from package if not set by user
-  if (is.null(datapath)){nccourts <- CJIL::data}
+  if (is.null(data)){
+    nccourts <- CJIL::data
+  } else {
+    nccourts <- data
+  }
 
   # create new dataset to check evolution of criminal cases over time
   nccourts_flat <- nccourts %>%

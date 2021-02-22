@@ -20,17 +20,17 @@ You should just execute the following code snippet on a R Session.
 if (!require(devtools)) {install.packages('devtools')}
 
 # install the CJIL from github
-devtools::install_githug('aassumpcao/CJIL')
+devtools::install_github('aassumpcao/CJIL')
 
 # there you go. you can use all functions in the package.
 # download the data
 data <- CJIL::data_download()
 
 # process the data
-CJIL::data_process(data)
+data_cleaned <- CJIL::data_process(data)
 
-# produce the analysis
-CJIL::data_analyze()
+# produce the analysis and store table
+table <- CJIL::data_analyze(data_cleaned)
 ```
 
 ## Each function
