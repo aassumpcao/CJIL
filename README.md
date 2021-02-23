@@ -8,7 +8,7 @@ Email: andre.assumpcao@gmail.com
 
 This script executes the functions in R package `CJIL`, which I have created
 as a code sample for the Criminal Justice Innovation Lab @ UNC. The package
-visits and downloads data from the NC Courts and NC demography APIs, process
+visits and downloads data from the NC Courts and NC demography APIs, processes them
 and executes a simple analysis of the data. I believe this is a neat and new way of conveying research results to the public.
 
 ## Instructions
